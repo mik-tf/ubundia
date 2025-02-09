@@ -8,6 +8,7 @@
 - [Installation](#installation)
   - [Manual Installation](#manual-installation)
   - [Using Make](#using-make)
+  - [On the ThreeFold Grid](#on-the-threefold-grid)
 - [Usage](#usage)
 - [Commands](#commands)
 - [Examples](#examples)
@@ -76,6 +77,23 @@ The Makefile commands do the following:
 - `make build`: Installs the script system-wide
 - `make rebuild`: Removes existing installation and reinstalls
 - `make delete`: Removes the installation completely
+
+### On the ThreeFold Grid
+
+You can use this script to set up a GPU node on the ThreeFold Grid:
+
+- Deploy full VM (dedicated node) with NVIDIA GPU
+- Install prerequisites:
+  ```
+  apt update && apt install -y git make sudo
+  ```
+- Clone, install the tool and run it
+  ```
+  git clone https://github.com/mik-tf/ubundia
+  cd ubundia
+  make
+  ubundia build
+  ```
 
 ## Usage
 
