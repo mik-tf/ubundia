@@ -114,9 +114,6 @@ delete_logs() {
 }
 
 install_prerequisites_and_dependencies() {
-    if [ "$(id -u)" = "0" ]; then
-        error "Please do not run this script as root. Use sudo when prompted."
-    fi
 
     # Check for Ubuntu
     if ! grep -q "Ubuntu" /etc/os-release; then
